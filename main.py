@@ -5,11 +5,9 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-db = sqlite3.connect('blog.db')
+conn = sqlite3.connect(r'blog.db')
 
-cur=db.cursor()
-
-
+cur = conn.cursor()
 
 # cur.execute("DROP TABLE IF EXISTS articles")
 cur.execute("""CREATE TABLE IF NOT EXISTS articles (
@@ -17,8 +15,11 @@ cur.execute("""CREATE TABLE IF NOT EXISTS articles (
     title TEXT NOT NULL,
     intro TEXT NOT NULL,
     text TEXT NOT NULL,
-    date DATETIME DEFAULT utcnow
+    date DATETIME DEFAULT UTCNOW
 )""")
+
+conn.commit()
+conn.close()
 
 
 # Добавление данных
