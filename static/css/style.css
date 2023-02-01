@@ -1,0 +1,73 @@
+body {
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  background:#b3f3cd ;
+   
+}
+
+div {
+width: 680px;
+height: 30px;
+
+}
+
+h1 {
+    text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+    color: brown;
+}
+
+h2 {
+  text-align: center;
+font-family: "Arial", sans-serif;
+font-size: 30px;
+line-height: 30px;
+  color: rgb(73, 42, 165);
+}
+
+p{
+    text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 36px;
+}
+
+table, td, th { 
+        border: 4px outset blue;
+        border-spacing: 5px;
+    font-size: 18px;
+      }
+
+.button {
+    background-color: #8aafeb;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+}
+
+
+
+li {
+  float:left; 
+}
+
+input {
+  width: 50%;
+  
+}
+
+textarea {
+  width: 100%;
+  
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+{{  article.title }}
+
+{% endblock %}
+
+{% block body %}
+<h1>{{ article.title }}</h1>
+
+<div>
+    
+    <p>{{ article.text }}</p>
+    <p><b>Date: {{ article.date.date() }}</b></p>
+    <a href="/posts/{{ article.id }}/del">Dzest ieraksu</a>
+    <a href="/posts/{{ article.id }}/update">Rediget ieraksu</a>
+    
+    
+</div>
+
+{% endblock %} 

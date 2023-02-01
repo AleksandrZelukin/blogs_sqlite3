@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %} 
+Visi posti
+
+{% endblock %}
+
+{% block body %}
+<h1>Viss</h1>
+
+{% if articles|length > 0 %}
+{% for el in articles  %}
+<div>
+    <h2> {{el.title}}  </h2>
+    <p>{{ el.intro }}</p>
+    <p><b>Date: {{ el.date.date() }}</b></p>
+
+    <a href="/posts/{{ el.id }}">Detalizets</a>
+</div>
+
+{%endfor%}
+{% else  %}
+<p> Ierakstus vel nav</p>
+{% endif %}
+
+{% endblock %} 

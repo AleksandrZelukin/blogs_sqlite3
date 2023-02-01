@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+Galvena lapa
+
+{% endblock %}
+
+{% block body %}
+<h1>Pievienot rakstu</h1>
+
+<div>
+<form method="post">
+    <input type="text" name="title" id="title" placeholder="nosaukums"><br>
+    <textarea name="intro" id="intro"  placeholder="iss aprāksts"></textarea><br>
+    <textarea name="text" id="text"  placeholder="pilns teksts"></textarea><br>
+    <input class="button" type="submit" value="Sūtit"><br>    
+</form>
+</div>
+{% endblock %} 
