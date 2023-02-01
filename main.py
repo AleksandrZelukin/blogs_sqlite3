@@ -18,12 +18,12 @@ cur.execute("""CREATE TABLE IF NOT EXISTS articles (
     date DATETIME DEFAULT UTCNOW
 )""")
 
-conn.commit()
-conn.close()
-
 
 # Добавление данных
-cur.execute("INSERT INTO articles VALUES ('Amazon is cool!', 'Amazon is really cool','Modest')")
+cur.execute("INSERT INTO articles VALUES ('1','pirmais ieraksts', 'par eksamenu','kartojam pirmdien','1-2-2023')")
+
+conn.commit()
+conn.close()
 
 # Удаление данных
 cur.execute("DELETE FROM articles WHERE title = 'Admin'")
