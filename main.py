@@ -6,7 +6,6 @@ from datetime import datetime
 app = Flask(__name__)
 
 conn = sqlite3.connect(r'blog.db')
-
 cur = conn.cursor()
 
 # cur.execute("DROP TABLE IF EXISTS articles")
@@ -20,17 +19,18 @@ cur.execute("""CREATE TABLE IF NOT EXISTS articles (
 
 
 # Добавление данных
-cur.execute("INSERT INTO articles VALUES ('1','pirmais ieraksts', 'par eksamenu','kartojam pirmdien','1-2-2023')")
+cur.execute("INSERT INTO articles VALUES ('5','pirmais ieraksts', 'par eksamenu','kartojam pirmdien','1-2-2023')")
 
 conn.commit()
 conn.close()
 
 # Удаление данных
-cur.execute("DELETE FROM articles WHERE title = 'Admin'")
+# cur.execute("DELETE FROM articles WHERE title = 'Admin'")
 
 # Изменение данных
-cur.execute("UPDATE articles SET title = 'Admin', views = 1 WHERE title = 'Amazon is cool!'")
-
+#cur.execute("UPDATE articles SET title = 'Admin', views = 1 WHERE title = 'Amazon is cool!'")
+conn = sqlite3.connect(r'blog.db')
+cur = conn.cursor()
 # Выборка данных
 cur.execute("SELECT rowid, * FROM articles WHERE rowid < 5 ORDER BY views")
 items = cur.fetchall()
